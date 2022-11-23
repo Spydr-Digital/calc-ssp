@@ -1,0 +1,26 @@
+{
+  "name": "calc-ssp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve",
+    "build": "esbuild index.js --bundle --outfile=dist/index.js",
+    "build-by-file": "node builder.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sprouller/calc-ssp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sprouller/calc-ssp/issues"
+  },
+  "homepage": "https://github.com/sprouller/calc-ssp#readme",
+  "devDependencies": {
+    "esbuild": "^0.15.15",
+    "serve": "^14.1.2"
+  }
+}
