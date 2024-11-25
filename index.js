@@ -60,26 +60,27 @@ $("#dmGo").click(function(){
 
   //Tax Bands
   let eng0 = 0;
-  let eng1 = 32;
+  let eng1 = 28;
   let eng2 = 42;
   let eng3 = 47;
 
   let scot0 = 0;
-  let scot1 = 31;
-  let scot2 = 32;
-  let scot3 = 33;
-  let scot4 = 53;
-  let scot5 = 43;
-  let scot6 = 48;
+  let scot1 = 27;
+  let scot2 = 28;
+  let scot3 = 29;
+  let scot4 = 50;
+  let scot5 = 44;
+  let scot6 = 47;
+  let scot7 = 50;
 
 
   if (savingPeriod == "eng") {
 
-    if (totalIncome > 150000){
+    if (totalIncome > 125140){
       taxCalc = monthlySaving*(1 - (eng3 / 100));
     }
 
-    else if (totalIncome > 50270 && totalIncome <= 150000) {
+    else if (totalIncome > 50270 && totalIncome <= 125140) {
       taxCalc = monthlySaving*(1 - (eng2 / 100));
     }
 
@@ -99,11 +100,15 @@ $("#dmGo").click(function(){
 
   else if (savingPeriod == "scot") {
 
-    if (totalIncome > 150000){
+    if (totalIncome > 125139){
+      taxCalc = monthlySaving*(1 - (scot7 / 100));
+    }
+
+    else if (totalIncome > 75000 && totalIncome <= 125139){
       taxCalc = monthlySaving*(1 - (scot6 / 100));
     }
 
-    else if (totalIncome > 50270 && totalIncome <= 150000) {
+    else if (totalIncome > 50270 && totalIncome <= 75000) {
       taxCalc = monthlySaving*(1 - (scot5 / 100));
     }
 
@@ -111,15 +116,15 @@ $("#dmGo").click(function(){
       taxCalc = monthlySaving*(1 - (scot4 / 100));
     }
 
-    else if (totalIncome > 25688 && totalIncome <= 43662) {
+    else if (totalIncome > 26561 && totalIncome <= 43662) {
       taxCalc = monthlySaving*(1 - (scot3 / 100));
     }
 
-    else if (totalIncome > 14732 && totalIncome <= 25688) {
+    else if (totalIncome > 14876 && totalIncome <= 26561) {
       taxCalc = monthlySaving*(1 - (scot2 / 100));
     }
 
-    else if (totalIncome > 12570 && totalIncome <= 14732) {
+    else if (totalIncome > 12570 && totalIncome <= 14876) {
       taxCalc = monthlySaving*(1 - (scot1 / 100));
     }
 
